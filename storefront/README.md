@@ -160,6 +160,11 @@ both directions, not just a single before/after screenshot.
 - Real inventory awareness: quick-add and add-to-cart both respect live
   stock counts (won't let you add more than what's available), and
   distinguish "sold out" from "only N left."
+- The Reveal Atelier — the gender reveal keepsake-box service, carried over
+  from `advertise.html` and given a proper home-page section (`js/reveal-
+  atelier.js`) with a booking inquiry form, degrading to a client-side
+  confirmation the same honest way the newsletter signup does until a real
+  booking endpoint is wired up.
 
 ## `data-*` attribute reference
 
@@ -184,6 +189,7 @@ both directions, not just a single before/after screenshot.
 | `data-add-to-cart` / `data-sticky-add` / `data-add-to-cart-sticky` | Add to cart |
 | `data-related-grid` / `data-related-section` | Related products |
 | `data-newsletter-form` | Footer signup |
+| `data-reveal-booking-form` | Reveal Atelier (gender reveal service) booking inquiry form, home page only |
 | `data-announcement-text` | Rotating announcement bar |
 | `.reveal` | Fades/rises in once scrolled into view (`initScrollReveal`) |
 | `.reveal-load` (+ optional `--reveal-delay`) | Fades/rises in immediately on page load, staggered — for above-the-fold content a scroll observer would never trigger (hero, product gallery) (`initLoadReveal`) |

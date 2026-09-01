@@ -7,6 +7,7 @@ import { initCartUI, celebrateAdd } from "./cart-ui.js";
 import { addToCart } from "./cart-store.js";
 import { initAnnouncementBar } from "./announcement.js";
 import { initNewsletterForm } from "./newsletter.js";
+import { initRevealAtelierForm } from "./reveal-atelier.js";
 
 async function renderFeatured() {
   const grid = qs("[data-featured-grid]");
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCartUI();
   initAnnouncementBar();
   initNewsletterForm();
+  initRevealAtelierForm();
   initScrollReveal();
   initLoadReveal();
   renderFeatured();
