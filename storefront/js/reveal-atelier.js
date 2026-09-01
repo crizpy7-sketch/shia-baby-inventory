@@ -12,6 +12,7 @@ export function initRevealAtelierForm() {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const name = form.querySelector('input[type="text"]').value;
     const email = form.querySelector('input[type="email"]').value;
     const date = form.querySelector('input[type="date"]').value;
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -22,7 +23,7 @@ export function initRevealAtelierForm() {
         await fetch(BOOKING_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, date }),
+          body: JSON.stringify({ name, email, date }),
         });
       } catch {
         // Fall through to the confirmation message regardless — don't
@@ -30,6 +31,9 @@ export function initRevealAtelierForm() {
       }
     }
 
-    form.outerHTML = '<p class="reveal-atelier__booked">Thank you — we\'ll be in touch to plan your Reveal Experience. 🤍</p>';
+    const message = document.createElement("p");
+    message.className = "reveal-atelier__booked";
+    message.textContent = `${name ? `Thank you, ${name}` : "Thank you"} — we'll be in touch to plan your Reveal Experience. 🤍`;
+    form.replaceWith(message);
   });
 }
