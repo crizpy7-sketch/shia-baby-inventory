@@ -600,6 +600,12 @@ ul {
   flex: 1 1 180px;
   width: auto;
 }
+.reveal-atelier__form textarea.field {
+  flex-basis: 100%;
+  resize: vertical;
+  min-height: 4.5em;
+  font-family: inherit;
+}
 .reveal-atelier__booked {
   font-family: var(--font-display);
   font-style: italic;

@@ -137,9 +137,18 @@
       <p class="reveal-atelier__quote reveal">"More than a reveal — a memory designed to last a lifetime."</p>
 
       <form class="reveal-atelier__form reveal" data-reveal-booking-form>
-        <input class="field" type="text" placeholder="Your name" aria-label="Your name" autocomplete="name" required>
-        <input class="field" type="email" placeholder="Your email address" aria-label="Email address" required>
-        <input class="field" type="date" aria-label="Approximate reveal date">
+        <input class="field" type="text" data-name-field placeholder="Your name" aria-label="Your name" autocomplete="name" required>
+        <input class="field" type="email" data-email-field placeholder="Your email address" aria-label="Email address" required>
+        <input class="field" type="date" data-date-field aria-label="Approximate reveal date">
+        <select class="field" data-song-style aria-label="Preferred style for your reveal song">
+          <option value="">Song style — Surprise Us</option>
+          <option value="pop">Pop</option>
+          <option value="country">Country</option>
+          <option value="rnb">R&amp;B / Soul</option>
+          <option value="acoustic">Acoustic / Folk</option>
+          <option value="classical">Classical</option>
+        </select>
+        <textarea class="field" data-song-details placeholder="Names, a favorite memory, an inside joke — anything you'd like woven into your reveal song" aria-label="Details for your personalized reveal song" rows="3"></textarea>
         <button class="btn btn--primary" type="submit">Reserve My Reveal Experience</button>
       </form>
     </div>
