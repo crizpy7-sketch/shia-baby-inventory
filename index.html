@@ -133,6 +133,18 @@
         </section>
 
         <section class="card">
+          <div class="card-head"><div><h3>4. Publish to storefront</h3><p>Send these items to the Shia &amp; Co. shop. They arrive unpublished until you switch them live in the console.</p></div><span class="badge">Storefront</span></div>
+          <div class="grid-2">
+            <div><label for="storefrontUrl">Storefront URL</label><input class="field" id="storefrontUrl" placeholder="https://shia-baby-storefront.vercel.app"></div>
+            <div><label for="consoleToken">Console token</label><input class="field" id="consoleToken" type="password" placeholder="SHIA_CONSOLE_TOKEN" autocomplete="off"></div>
+          </div>
+          <div style="height:12px"></div>
+          <div class="notice">Only name, size, retail price, SKU and quantity are sent. Your <strong>cost and margin stay in this browser</strong> and are never uploaded.</div>
+          <div class="btn-row" style="margin-top:13px"><button class="btn gold" id="publishBtn">Publish to storefront</button></div>
+          <div id="publishLog" class="log" style="margin-top:13px">Ready.</div>
+        </section>
+
+        <section class="card">
           <div class="card-head"><div><h3>4. Make labels</h3><p>Code 128 labels are generated as crisp SVG bars and checked before printing.</p></div><span class="badge ok">Actual-size print</span></div>
           <div class="grid-3">
             <div><label for="stockPreset">Label stock</label><select id="stockPreset"><option value="twoByOne">2 in × 1 in</option><option value="avery">Avery 5160 — 2.625 in × 1 in</option></select></div>
@@ -229,7 +241,7 @@
 
   function saveLocal(){
     localStorage.setItem('shiaBabyInventoryState', JSON.stringify({items:state.items,markup:state.markup,ending:state.ending,history:state.history}));
-    localStorage.setItem('shiaBabySettings', JSON.stringify({vendor:$('#vendor').value,invoiceRef:$('#invoiceRef').value,backendUrl:$('#backendUrl').value,mode:$('#mode').value,taxId:$('#taxId').value,locationId:$('#locationId').value,stockPreset:$('#stockPreset').value,vendorOnLabel:$('#vendorOnLabel').value}));
+    localStorage.setItem('shiaBabySettings', JSON.stringify({vendor:$('#vendor').value,invoiceRef:$('#invoiceRef').value,backendUrl:$('#backendUrl').value,mode:$('#mode').value,taxId:$('#taxId').value,locationId:$('#locationId').value,stockPreset:$('#stockPreset').value,vendorOnLabel:$('#vendorOnLabel').value,storefrontUrl:$('#storefrontUrl').value}));
     $('#saveStatus').textContent='Saved locally';
   }
 
@@ -475,9 +487,48 @@
     const el=$('#historySummary');if(!state.history.length){el.textContent='No saved runs.';return}const runs=new Set(state.history.map(x=>x.date));const units=state.history.reduce((a,x)=>a+(Number(x.qty)||0),0);el.textContent=`${runs.size} saved run${runs.size===1?'':'s'} • ${state.history.length} variation records • ${units} units`;
   }
 
-  ['vendor','invoiceRef','backendUrl','mode','taxId','locationId','stockPreset','vendorOnLabel'].forEach(id=>$('#'+id).addEventListener('change',saveLocal));
+  ['vendor','invoiceRef','backendUrl','mode','taxId','locationId','stockPreset','vendorOnLabel','storefrontUrl'].forEach(id=>$('#'+id).addEventListener('change',saveLocal));
   loadLocal();render();
 })();
+
+  /* ---- Publish to the Shia & Co. storefront -------------------------------
+     Sends an allowlisted subset of each row. `cost` and `margin` are never
+     included: wholesale figures stay in this browser. The storefront stores
+     imports unpublished, so nothing reaches customers by accident. ------- */
+  $('#publishBtn').addEventListener('click',async()=>{
+    const log=$('#publishLog');
+    const write=m=>{log.textContent=m};
+    try{
+      const base=$('#storefrontUrl').value.trim().replace(/\/+$/,'');
+      if(!base)throw new Error('Enter your storefront URL first.');
+      const token=$('#consoleToken').value.trim();
+      if(!token)throw new Error('Enter your console token first.');
+      if(!state.items.length)throw new Error('There are no items to publish.');
+
+      const items=state.items.map(r=>({name:r.name,size:r.size,retail:r.retail,sku:r.sku,gtin:r.gtin,qty:r.qty,vendor:r.vendor}));
+      write(`Publishing ${items.length} item(s)…`);
+
+      const res=await fetch(`${base}/api/admin/products`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-shia-console-token':token},
+        body:JSON.stringify({items})
+      });
+      const data=await res.json().catch(()=>({}));
+
+      if(res.status===401)throw new Error('Token rejected by the storefront.');
+      if(res.status===503)throw new Error(data.detail||'Storefront console is not configured.');
+      if(!res.ok)throw new Error(data.detail||data.error||`Storefront returned ${res.status}.`);
+
+      const lines=[`Imported ${data.imported} item(s).`];
+      if(data.persisted===false)lines.push('WARNING: storefront backend not configured — stored in memory only, not durably saved.');
+      if(data.rejected&&data.rejected.length)lines.push(`Skipped ${data.rejected.length}: `+data.rejected.slice(0,6).map(r=>`${r.name||'row '+(r.index+1)} (${r.problems.join('; ')})`).join(' | '));
+      if(data.duplicate_skus&&data.duplicate_skus.length)lines.push(`Duplicate SKUs merged: ${data.duplicate_skus.join(', ')}`);
+      lines.push('Items arrive unpublished. Open the storefront console to switch them live.');
+      write(lines.join('\n'));
+      saveLocal();
+    }catch(e){write('Error: '+e.message)}
+  });
+
 </script>
 </body>
 </html>
