@@ -1,9 +1,9 @@
 import { prefersReducedMotion } from "./utils.js";
 
 /**
- * Fades/rises any [data-reveal] or .reveal element into view once it
- * crosses the viewport threshold. Call again after injecting new DOM
- * (e.g. after a grid re-render) — already-observed elements are skipped.
+ * Fades/rises any .reveal element into view once it crosses the viewport
+ * threshold. Call again after injecting new DOM (e.g. after a grid
+ * re-render) — already-observed elements are skipped.
  */
 let observer;
 export function initScrollReveal(root = document) {
@@ -25,6 +25,23 @@ export function initScrollReveal(root = document) {
     );
   }
   root.querySelectorAll(".reveal:not(.in)").forEach((el) => observer.observe(el));
+}
+
+/**
+ * Fades/rises .reveal-load elements in immediately on page load, staggered
+ * via each element's --reveal-delay custom property. For above-the-fold
+ * content (hero, product gallery) that a scroll observer would never fire
+ * for since it's already on screen when the page arrives.
+ */
+export function initLoadReveal(root = document) {
+  const els = root.querySelectorAll(".reveal-load:not(.in)");
+  if (prefersReducedMotion()) {
+    els.forEach((el) => el.classList.add("in"));
+    return;
+  }
+  requestAnimationFrame(() => {
+    els.forEach((el) => el.classList.add("in"));
+  });
 }
 
 // Note on page-to-page transitions: cross-document View Transitions (the

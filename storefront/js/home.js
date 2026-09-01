@@ -1,7 +1,7 @@
 import { qs, on } from "./utils.js";
 import { listProducts } from "./data.js";
 import { renderProductCard } from "./product-card.js";
-import { initScrollReveal } from "./motion.js";
+import { initScrollReveal, initLoadReveal } from "./motion.js";
 import { initNav } from "./nav.js";
 import { initCartUI, celebrateAdd } from "./cart-ui.js";
 import { addToCart } from "./cart-store.js";
@@ -45,5 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initAnnouncementBar();
   initNewsletterForm();
   initScrollReveal();
+  initLoadReveal();
   renderFeatured();
 });

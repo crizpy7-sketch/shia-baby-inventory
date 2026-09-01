@@ -185,7 +185,8 @@ both directions, not just a single before/after screenshot.
 | `data-related-grid` / `data-related-section` | Related products |
 | `data-newsletter-form` | Footer signup |
 | `data-announcement-text` | Rotating announcement bar |
-| `data-reveal` / `.reveal` | Scroll-reveal animation target |
+| `.reveal` | Fades/rises in once scrolled into view (`initScrollReveal`) |
+| `.reveal-load` (+ optional `--reveal-delay`) | Fades/rises in immediately on page load, staggered — for above-the-fold content a scroll observer would never trigger (hero, product gallery) (`initLoadReveal`) |
 
 ## Testing notes
 

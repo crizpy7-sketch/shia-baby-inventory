@@ -69,12 +69,12 @@
 <main id="main">
   <section class="section" data-product-page>
     <div class="container product-detail">
-      <div class="product-gallery">
+      <div class="product-gallery reveal-load" style="--reveal-delay: 0s;">
         <div class="product-gallery__main" data-gallery-main></div>
         <div class="product-gallery__thumbs" data-gallery-thumbs></div>
       </div>
 
-      <div class="product-info">
+      <div class="product-info reveal-load" style="--reveal-delay: .15s;">
         <p class="product-info__vendor" data-product-vendor></p>
         <h1 data-product-title></h1>
         <p class="product-info__price" data-product-price></p>
@@ -107,7 +107,7 @@
 
   <section class="section--tight" data-related-section>
     <div class="container">
-      <div style="text-align:center; margin-bottom: var(--space-6);">
+      <div class="reveal" style="text-align:center; margin-bottom: var(--space-6);">
         <p class="eyebrow">You May Also Adore</p>
       </div>
       <div class="product-grid" data-related-grid></div>
@@ -121,7 +121,7 @@
 </div>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container reveal">
     <p class="eyebrow">Join the Family</p>
     <h2 style="font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-4);">Beautiful Things, First</h2>
     <form class="newsletter-form" data-newsletter-form>

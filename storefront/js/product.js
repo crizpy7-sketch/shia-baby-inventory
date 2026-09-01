@@ -1,7 +1,7 @@
 import { qs, qsa, on, formatMoney, announce } from "./utils.js";
 import { getProduct, listProducts } from "./data.js";
 import { renderProductCard } from "./product-card.js";
-import { initScrollReveal } from "./motion.js";
+import { initScrollReveal, initLoadReveal } from "./motion.js";
 import { initNav } from "./nav.js";
 import { initCartUI, celebrateAdd } from "./cart-ui.js";
 import { addToCart } from "./cart-store.js";
@@ -176,6 +176,7 @@ async function main() {
   qs("[data-product-vendor]").textContent = product.vendor ?? "Shia Baby";
 
   renderGallery(product);
+  initLoadReveal();
 
   let selected = { ...Object.fromEntries(product.variants[0].selectedOptions.map((o) => [o.name, o.value])) };
   let currentVariant = findVariant(product, selected) ?? product.variants[0];

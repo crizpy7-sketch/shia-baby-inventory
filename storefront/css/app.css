@@ -899,6 +899,17 @@ ul {
   transform: none;
 }
 
+.reveal-load {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s var(--ease-standard), transform 0.7s var(--ease-standard);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal-load.in {
+  opacity: 1;
+  transform: none;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -931,7 +942,8 @@ ul {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .reveal {
+  .reveal,
+  .reveal-load {
     opacity: 1;
     transform: none;
   }

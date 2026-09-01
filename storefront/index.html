@@ -73,15 +73,15 @@
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__copy">
-        <p class="eyebrow">A Luxury Baby Boutique</p>
-        <h1>Timeless Baby <em>Essentials</em></h1>
-        <p class="hero__lede">Curated luxury clothing, gifts, and keepsakes designed for life's sweetest moments.</p>
-        <div class="hero__ctas">
+        <p class="eyebrow reveal-load" style="--reveal-delay: 0s;">A Luxury Baby Boutique</p>
+        <h1 class="reveal-load" style="--reveal-delay: .1s;">Timeless Baby <em>Essentials</em></h1>
+        <p class="hero__lede reveal-load" style="--reveal-delay: .2s;">Curated luxury clothing, gifts, and keepsakes designed for life's sweetest moments.</p>
+        <div class="hero__ctas reveal-load" style="--reveal-delay: .3s;">
           <a class="btn btn--primary" href="shop.html">Shop the Collection</a>
           <a class="btn btn--ghost" href="shop.html?collection=gifts">Explore Gifts</a>
         </div>
       </div>
-      <div class="hero__media">
+      <div class="hero__media reveal-load" style="--reveal-delay: .15s;">
         <img src="https://cdn.shopify.com/s/files/1/0803/8704/7637/files/518e8a3b344ec1a426b1d9d4cd5e10bf8cd5183a6531b339bf16cc63b54de65f.jpg" alt="A Shia Baby product, softly styled" width="900" height="1125">
       </div>
     </div>
@@ -94,7 +94,7 @@
         <h2 id="featured-heading" style="font-size: var(--text-3xl); margin-top: var(--space-2);">Begin Their Story</h2>
       </div>
       <div class="product-grid" data-featured-grid aria-busy="true"></div>
-      <div style="text-align:center; margin-top: var(--space-7);">
+      <div class="reveal" style="text-align:center; margin-top: var(--space-7);">
         <a class="btn btn--ghost" href="shop.html">View All Products</a>
       </div>
     </div>
@@ -102,7 +102,7 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container reveal">
     <p class="eyebrow">Join the Family</p>
     <h2 style="font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-4);">Beautiful Things, First</h2>
     <form class="newsletter-form" data-newsletter-form>
