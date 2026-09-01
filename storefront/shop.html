@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All | Shia Baby</title>
+<meta name="description" content="Browse the full Shia Baby collection — curated luxury baby clothing, gifts, and keepsakes.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+<script>
+  window.__STOREFRONT_CONFIG__ = null; // { domain: 'your-store.myshopify.com', token: 'shpat_...' }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="announcement" role="region" aria-label="Announcements">
+  <span data-announcement-text>Complimentary Shipping on Orders Over $75</span>
+</div>
+
+<header class="site-header" data-site-header>
+  <div class="container site-header__row">
+    <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="logo" href="index.html">Shia <em>Baby</em></a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?collection=girl">Baby Girl</a>
+      <a href="shop.html?collection=boy">Baby Boy</a>
+      <a href="shop.html?collection=gifts">Gifts</a>
+      <a href="index.html#reveal-atelier">Reveal Atelier</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn" data-search-toggle aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      </button>
+      <button class="icon-btn" data-open-cart aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12.2a2 2 0 01-2 1.8H8.2a2 2 0 01-2-1.8L5 8z"/><path d="M8.5 10V6.5a3.5 3.5 0 017 0V10"/></svg>
+        <span class="count-badge" data-cart-count hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html">Shia <em>Baby</em></a>
+    <button class="icon-btn" data-menu-close aria-label="Close menu">✕</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="shop.html">Shop All</a>
+    <a href="shop.html?collection=girl">Baby Girl</a>
+    <a href="shop.html?collection=boy">Baby Boy</a>
+    <a href="shop.html?collection=gifts">Gifts</a>
+    <a href="index.html#reveal-atelier">Reveal Atelier</a>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay aria-hidden="true">
+  <div class="search-overlay__panel">
+    <div class="search-overlay__field">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      <input type="search" placeholder="Search products…" data-search-input aria-label="Search products">
+      <button class="icon-btn" data-search-close aria-label="Close search">✕</button>
+    </div>
+    <p class="empty-state" data-search-empty hidden style="padding: var(--space-6) 0;">No products found.</p>
+    <ul data-search-results></ul>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section--tight">
+    <div class="container">
+      <div class="reveal-load" style="--reveal-delay: 0s; text-align:center; margin-bottom: var(--space-6);">
+        <p class="eyebrow">Shop</p>
+        <h1 style="font-size: var(--text-3xl); margin-top: var(--space-2);">The Full Collection</h1>
+      </div>
+
+      <div class="chip-row reveal-load" data-collection-chips style="--reveal-delay: .1s; justify-content:center; margin-bottom: var(--space-6);"></div>
+
+      <div class="shop-toolbar reveal-load" style="--reveal-delay: .18s;">
+        <p data-shop-count style="color: var(--color-ink-muted); font-size: var(--text-sm);"></p>
+        <div class="shop-controls">
+          <input class="field" type="search" placeholder="Search this collection…" data-shop-search aria-label="Search this collection" style="width: 220px;">
+          <select class="field" data-sort-select aria-label="Sort by">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="title-asc">Alphabetical</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" data-shop-grid aria-busy="true"></div>
+      <p class="empty-state" data-shop-empty hidden>No pieces match yet — try a different filter or search.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container reveal">
+    <p class="eyebrow">Join the Family</p>
+    <h2 style="font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-4);">Beautiful Things, First</h2>
+    <form class="newsletter-form" data-newsletter-form>
+      <input class="field" type="email" placeholder="Your email address" aria-label="Email address" required>
+      <button class="btn btn--primary" type="submit">Join</button>
+    </form>
+    <p style="margin-top: var(--space-6); font-size: var(--text-sm); color: var(--color-ink-muted);">© <span id="year"></span> Shia Baby · Timeless Baby Essentials</p>
+  </div>
+</footer>
+
+<div class="overlay" data-overlay></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-drawer__head">
+    <h2 style="font-size: var(--text-xl);">Your Cart</h2>
+    <button class="icon-btn" data-cart-close aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-drawer__shipping">
+    <p data-shipping-message style="font-size: var(--text-sm); font-weight: 600;"></p>
+    <div class="shipping-bar"><div class="shipping-bar__fill" data-shipping-fill></div></div>
+  </div>
+  <ul class="cart-drawer__items" data-cart-items></ul>
+  <div class="cart-drawer__empty" data-cart-empty>Your cart is waiting for something beautiful.</div>
+  <div class="cart-drawer__footer" data-cart-footer hidden>
+    <div class="cart-subtotal-row"><span>Subtotal</span><span data-cart-subtotal>$0.00</span></div>
+    <button class="btn btn--primary" style="width:100%;" data-checkout>Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" role="status"></div>
+
+<script type="module" src="js/shop.js"></script>
+</body>
+</html>

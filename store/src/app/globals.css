@@ -1,0 +1,21 @@
+:root {
+  --indigo: #24345f;
+  --indigo-dark: #334a7c;
+  --cream: #f7f1e8;
+  --paper: #fffdf9;
+  --gold: #b89b68;
+  --ink: #1e2430;
+  --muted: #6d7280;
+  --line: #ded8cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shia Baby | Timeless Baby Essentials</title>
+<meta name="description" content="Curated luxury baby clothing, gift sets, and keepsakes. Heirloom quality, beautifully wrapped.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+<script>
+  // Set this to go live against the real Shopify store — see README.md.
+  // Left unset, the app runs on the bundled mock catalog.
+  window.__STOREFRONT_CONFIG__ = null; // { domain: 'your-store.myshopify.com', token: 'shpat_...' }
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="announcement" role="region" aria-label="Announcements">
+  <span data-announcement-text>Complimentary Shipping on Orders Over $75</span>
+</div>
+
+<header class="site-header" data-site-header>
+  <div class="container site-header__row">
+    <button class="icon-btn menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="logo" href="index.html">Shia <em>Baby</em></a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?collection=girl">Baby Girl</a>
+      <a href="shop.html?collection=boy">Baby Boy</a>
+      <a href="shop.html?collection=gifts">Gifts</a>
+      <a href="index.html#reveal-atelier">Reveal Atelier</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn" data-search-toggle aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      </button>
+      <button class="icon-btn" data-open-cart aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12.2a2 2 0 01-2 1.8H8.2a2 2 0 01-2-1.8L5 8z"/><path d="M8.5 10V6.5a3.5 3.5 0 017 0V10"/></svg>
+        <span class="count-badge" data-cart-count hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html">Shia <em>Baby</em></a>
+    <button class="icon-btn" data-menu-close aria-label="Close menu">✕</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="shop.html">Shop All</a>
+    <a href="shop.html?collection=girl">Baby Girl</a>
+    <a href="shop.html?collection=boy">Baby Boy</a>
+    <a href="shop.html?collection=gifts">Gifts</a>
+    <a href="index.html#reveal-atelier">Reveal Atelier</a>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay aria-hidden="true">
+  <div class="search-overlay__panel">
+    <div class="search-overlay__field">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      <input type="search" placeholder="Search products…" data-search-input aria-label="Search products">
+      <button class="icon-btn" data-search-close aria-label="Close search">✕</button>
+    </div>
+    <p class="empty-state" data-search-empty hidden style="padding: var(--space-6) 0;">No products found.</p>
+    <ul data-search-results></ul>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow reveal-load" style="--reveal-delay: 0s;">A Luxury Baby Boutique</p>
+        <h1 class="reveal-load" style="--reveal-delay: .1s;">Timeless Baby <em>Essentials</em></h1>
+        <p class="hero__lede reveal-load" style="--reveal-delay: .2s;">Curated luxury clothing, gifts, and keepsakes designed for life's sweetest moments.</p>
+        <div class="hero__ctas reveal-load" style="--reveal-delay: .3s;">
+          <a class="btn btn--primary" href="shop.html">Shop the Collection</a>
+          <a class="btn btn--ghost" href="shop.html?collection=gifts">Explore Gifts</a>
+          <a class="btn btn--ghost" href="#reveal-atelier">Book the Reveal Atelier</a>
+        </div>
+      </div>
+      <div class="hero__media reveal-load" style="--reveal-delay: .15s;">
+        <img src="https://cdn.shopify.com/s/files/1/0803/8704/7637/files/518e8a3b344ec1a426b1d9d4cd5e10bf8cd5183a6531b339bf16cc63b54de65f.jpg" alt="A Shia Baby product, softly styled" width="900" height="1125">
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal-atelier" id="reveal-atelier" aria-labelledby="reveal-atelier-heading">
+    <div class="container">
+      <div class="reveal" style="text-align:center; margin-bottom: var(--space-7);">
+        <p class="eyebrow">Now Booking</p>
+        <h2 id="reveal-atelier-heading" style="font-size: var(--text-3xl); margin-top: var(--space-2);">The Reveal Atelier</h2>
+        <p style="max-width: 56ch; margin: var(--space-3) auto 0; color: var(--color-ink-muted);">A cinematic, emotional keepsake experience for expecting parents — a luxury gender reveal, delivered in a box.</p>
+      </div>
+
+      <div class="reveal-steps">
+        <div class="reveal-step reveal">
+          <svg class="reveal-step__art" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="14" y="24" width="36" height="26" rx="2"/>
+            <path d="M32 24v26M14 31h36" opacity=".55"/>
+            <path d="M32 24c-6-1-11-3-10-7 1-3 7-3 10 7zM32 24c6-1 11-3 10-7-1-3-7-3-10 7z"/>
+            <path d="M22 14l3-4M42 14l-3-4" opacity=".6"/>
+          </svg>
+          <span class="reveal-step__num">One — The Arrival</span>
+          <h3>A Keepsake Box Arrives</h3>
+          <p>A luxurious magnetic box in a soft neutral aesthetic — free from pink or blue — creates mystery from the moment it's opened.</p>
+        </div>
+        <div class="reveal-step reveal">
+          <svg class="reveal-step__art" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 44V16l28-6v28"/>
+            <circle cx="20" cy="46" r="8"/>
+            <circle cx="48" cy="38" r="8"/>
+            <path d="M12 26c3-4 9-4 12 0M40 20c3-4 9-4 12 0" opacity=".55"/>
+          </svg>
+          <span class="reveal-step__num">Two — The Reveal Song</span>
+          <h3>A Personalized Musical Journey</h3>
+          <p>A QR code plays a song written just for them — the lyrics slowly, emotionally revealing their baby's gender.</p>
+        </div>
+        <div class="reveal-step reveal">
+          <svg class="reveal-step__art" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 12c-14 0-24 9-24 20s10 20 24 20 24-9 24-20-10-20-24-20z"/>
+            <path d="M20 26c2-6 20-6 22 0M22 40c2 4 16 4 18 0" opacity=".6"/>
+            <circle cx="32" cy="32" r="3.5" fill="currentColor" stroke="none"/>
+            <path d="M32 6v6" opacity=".6"/>
+          </svg>
+          <span class="reveal-step__num">Three — The Keepsake</span>
+          <h3>An Outfit, Unwrapped</h3>
+          <p>Tied in ribbon beneath the card, a beautifully folded outfit offers the final, tangible confirmation — a keepsake for life.</p>
+        </div>
+      </div>
+
+      <p class="reveal-atelier__quote reveal">"More than a reveal — a memory designed to last a lifetime."</p>
+
+      <form class="reveal-atelier__form reveal" data-reveal-booking-form>
+        <input class="field" type="text" data-name-field placeholder="Your name" aria-label="Your name" autocomplete="name" required>
+        <input class="field" type="email" data-email-field placeholder="Your email address" aria-label="Email address" required>
+        <input class="field" type="date" data-date-field aria-label="Approximate reveal date">
+        <select class="field" data-song-style aria-label="Preferred style for your reveal song">
+          <option value="">Song style — Surprise Us</option>
+          <option value="pop">Pop</option>
+          <option value="country">Country</option>
+          <option value="rnb">R&amp;B / Soul</option>
+          <option value="acoustic">Acoustic / Folk</option>
+          <option value="classical">Classical</option>
+        </select>
+        <textarea class="field" data-song-details placeholder="Names, a favorite memory, an inside joke — anything you'd like woven into your reveal song" aria-label="Details for your personalized reveal song" rows="3"></textarea>
+        <button class="btn btn--primary" type="submit">Reserve My Reveal Experience</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="reveal" style="text-align:center; margin-bottom: var(--space-7);">
+        <p class="eyebrow">New Arrivals</p>
+        <h2 id="featured-heading" style="font-size: var(--text-3xl); margin-top: var(--space-2);">Begin Their Story</h2>
+      </div>
+      <div class="product-grid" data-featured-grid aria-busy="true"></div>
+      <div class="reveal" style="text-align:center; margin-top: var(--space-7);">
+        <a class="btn btn--ghost" href="shop.html">View All Products</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container reveal">
+    <p class="eyebrow">Join the Family</p>
+    <h2 style="font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-4);">Beautiful Things, First</h2>
+    <form class="newsletter-form" data-newsletter-form>
+      <input class="field" type="email" placeholder="Your email address" aria-label="Email address" required>
+      <button class="btn btn--primary" type="submit">Join</button>
+    </form>
+    <p style="margin-top: var(--space-6); font-size: var(--text-sm); color: var(--color-ink-muted);">© <span id="year"></span> Shia Baby · Timeless Baby Essentials</p>
+  </div>
+</footer>
+
+<div class="overlay" data-overlay></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-drawer__head">
+    <h2 style="font-size: var(--text-xl);">Your Cart</h2>
+    <button class="icon-btn" data-cart-close aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-drawer__shipping">
+    <p data-shipping-message style="font-size: var(--text-sm); font-weight: 600;"></p>
+    <div class="shipping-bar"><div class="shipping-bar__fill" data-shipping-fill></div></div>
+  </div>
+  <ul class="cart-drawer__items" data-cart-items></ul>
+  <div class="cart-drawer__empty" data-cart-empty>Your cart is waiting for something beautiful.</div>
+  <div class="cart-drawer__footer" data-cart-footer hidden>
+    <div class="cart-subtotal-row"><span>Subtotal</span><span data-cart-subtotal>$0.00</span></div>
+    <button class="btn btn--primary" style="width:100%;" data-checkout>Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" role="status"></div>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>
