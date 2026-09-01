@@ -1,0 +1,86 @@
+/*
+  Design tokens — this is the file a designer (human or agent) should edit
+  to restyle the storefront. Every value here is a CSS custom property
+  consumed by app.css; nothing in app.css hardcodes a color, font, spacing
+  value, or timing — change it here and it propagates everywhere.
+
+  Current values are a functional placeholder (the indigo/cream palette
+  already used across this repo — see /BRAND.md at the repo root) so the
+  site looks coherent and demoable today. Treat every value below as
+  intended to be replaced, not preserved.
+*/
+
+:root {
+  /* ---------- color ---------- */
+  --color-bg: #f7f1e8;
+  --color-surface: #fffdf9;
+  --color-surface-raised: #ffffff;
+  --color-ink: #1e2430;
+  --color-ink-muted: #6d7280;
+  --color-border: #ded8cf;
+
+  --color-primary: #24345f;
+  --color-primary-hover: #334a7c;
+  --color-primary-contrast: #f7f1e8;
+
+  --color-accent: #b89b68;
+  --color-success: #2c6d50;
+  --color-warning: #a76b17;
+  --color-danger: #a53232;
+
+  /* ---------- typography ---------- */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.6;
+
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.16em;
+
+  /* ---------- spacing scale ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* ---------- shape ---------- */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(30, 36, 48, 0.06);
+  --shadow-md: 0 12px 32px -12px rgba(30, 36, 48, 0.18);
+  --shadow-lg: 0 24px 60px -20px rgba(30, 36, 48, 0.28);
+
+  /* ---------- motion ---------- */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ---------- layout ---------- */
+  --container-max: 1280px;
+  --header-height: 76px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Intentionally left as a hook, not a full dark theme — a designer
+     deciding whether/how this brand does dark mode should populate this,
+     not inherit an unreviewed default. */
+}

@@ -1,0 +1,549 @@
+{
+  "_note": "Real products pulled from the live Shia Baby Shopify store (shiababyboutique.com) during development, used here as realistic fixture data so this storefront is fully browsable without a Storefront API token configured yet. Swap for live data by setting window.__STOREFRONT_CONFIG__ in index.html \u2014 see README.md.",
+  "collections": [
+    {
+      "handle": "new-arrivals",
+      "title": "New Arrivals",
+      "description": "Just landed."
+    },
+    {
+      "handle": "bubbles",
+      "title": "Bubbles & Rompers",
+      "description": "Soft cotton everyday layette."
+    },
+    {
+      "handle": "gifts",
+      "title": "Gift-Ready",
+      "description": "Beautifully finished pieces made for giving."
+    },
+    {
+      "handle": "girl",
+      "title": "Baby Girl",
+      "description": "Soft hues and delicate details."
+    },
+    {
+      "handle": "boy",
+      "title": "Baby Boy",
+      "description": "Classic charm, gentle comfort."
+    }
+  ],
+  "products": [
+    {
+      "id": "gid://shopify/Product/9443887055061",
+      "handle": "western-baby-girls-blanket",
+      "title": "Western Baby Girls Blanket",
+      "description": "A keepsake-soft blanket in a western print \u2014 made to be carried everywhere, and kept forever.",
+      "vendor": "Shia Baby",
+      "productType": "Blanket",
+      "tags": [
+        "gifts",
+        "girl"
+      ],
+      "collections": [
+        "gifts",
+        "girl",
+        "new-arrivals"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/518e8a3b344ec1a426b1d9d4cd5e10bf8cd5183a6531b339bf16cc63b54de65f.jpg",
+        "altText": "Western print baby blanket folded on a neutral surface"
+      },
+      "priceRange": {
+        "min": 20.99,
+        "max": 20.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "One Size"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497023701",
+          "title": "One Size",
+          "sku": "BL0204-M",
+          "price": 20.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "One Size"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887186133",
+      "handle": "baby-bow-pumpkin-print-bubble",
+      "title": "Baby Bow Pumpkin Print Bubble",
+      "description": "A sweet pumpkin-print bubble finished with a bow \u2014 soft cotton for the season's littlest moments.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "girl"
+      ],
+      "collections": [
+        "bubbles",
+        "girl",
+        "new-arrivals"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/e0bccffa91dfa18ee9326dc3361d7a9f20b71be0497696cce33a054afc5e70b8.jpg",
+        "altText": "Pumpkin print baby bubble with a bow"
+      },
+      "priceRange": {
+        "min": 25.99,
+        "max": 25.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497154773",
+          "title": "3-6M",
+          "sku": "SR1827-3XS",
+          "price": 25.99,
+          "available": true,
+          "quantityAvailable": 1,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887218901",
+      "handle": "baby-pumpkin-print-bubble-with-pink-bow",
+      "title": "Baby Pumpkin Print Bubble With Pink Bow",
+      "description": "Pumpkin print with a pink bow \u2014 a gentle bubble for autumn firsts.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "girl"
+      ],
+      "collections": [
+        "bubbles",
+        "girl"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/9f72c75b309d2b05131b9e4743080007c33eaa1cb5b3c817711bd56b3eaf3054.jpg",
+        "altText": "Pumpkin print baby bubble with a pink bow"
+      },
+      "priceRange": {
+        "min": 25.99,
+        "max": 25.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497187541",
+          "title": "3-6M",
+          "sku": "SR1865-3XS",
+          "price": 25.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887382741",
+      "handle": "baby-flower-bubble",
+      "title": "Baby Flower Bubble",
+      "description": "A flower-print bubble in buttery-soft cotton \u2014 made for garden mornings.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "girl"
+      ],
+      "collections": [
+        "bubbles",
+        "girl"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/f69270e5dbe7a880906ec294c66c51a391e2cfbcf133eaf3c3c651f8567d57a8.jpg",
+        "altText": "Flower print baby bubble"
+      },
+      "priceRange": {
+        "min": 24.99,
+        "max": 24.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497384149",
+          "title": "3-6M",
+          "sku": "LR0769-3XS",
+          "price": 24.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887448277",
+      "handle": "baby-blue-bow-printed-bubble",
+      "title": "Baby Blue Bow Printed Bubble",
+      "description": "Blue bows on soft cotton \u2014 a bubble as classic as our signature indigo.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "girl"
+      ],
+      "collections": [
+        "bubbles",
+        "girl"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/b99fbee02103941bece225b5fadbd287431ff82ec8f9df41bd6c344b16b390d7.jpg",
+        "altText": "Blue bow print baby bubble"
+      },
+      "priceRange": {
+        "min": 25.99,
+        "max": 25.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497449685",
+          "title": "3-6M",
+          "sku": "LR2043-3XS",
+          "price": 25.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887874261",
+      "handle": "flower-printed-bow-smocked-baby-bubble",
+      "title": "Flower Printed Bow Smocked Baby Bubble",
+      "description": "Hand-feel smocking and a flower print \u2014 an heirloom bubble for special days.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "girl"
+      ],
+      "collections": [
+        "bubbles",
+        "girl",
+        "gifts"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/192461aa833989d3f573c143cdfc7caa58aa8c80b798db22066ec505249026e8.jpg",
+        "altText": "Smocked flower print baby bubble"
+      },
+      "priceRange": {
+        "min": 24.99,
+        "max": 24.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497842901",
+          "title": "3-6M",
+          "sku": "SR2994-3XS",
+          "price": 24.99,
+          "available": false,
+          "quantityAvailable": 0,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443887939797",
+      "handle": "baby-character-bubble",
+      "title": "Baby Character Bubble",
+      "description": "A playful character bubble in soft cotton \u2014 everyday charm, beautifully made.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette"
+      ],
+      "collections": [
+        "bubbles",
+        "new-arrivals"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/4d44e16ac2eacb1a1b35f6149ea695d646ddc4765fd48ca8be02da369d987dbb.jpg",
+        "altText": "Character print baby bubble"
+      },
+      "priceRange": {
+        "min": 25.99,
+        "max": 25.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "3-6M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151497941205",
+          "title": "3-6M",
+          "sku": "LR0022-3XS",
+          "price": 25.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "3-6M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443888038101",
+      "handle": "black-checkered-baby-boy-romper-with-pocket",
+      "title": "Black Checkered Baby Boy Romper With Pocket",
+      "description": "A checkered romper with a real pocket \u2014 tailored charm for little gentlemen.",
+      "vendor": "Shia Baby",
+      "productType": "Romper",
+      "tags": [
+        "layette",
+        "boy"
+      ],
+      "collections": [
+        "boy",
+        "new-arrivals"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/57f187325980f655789c4e59611a3ceca60bc68b99f51358ca2c9e1fffba6bb8_174b2598-4471-430c-becc-c8ab1d414f81.jpg",
+        "altText": "Black checkered baby boy romper with pocket"
+      },
+      "priceRange": {
+        "min": 24.99,
+        "max": 24.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "6-12M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151498039509",
+          "title": "6-12M",
+          "sku": "LR0759-2XS",
+          "price": 24.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "6-12M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443888169173",
+      "handle": "checkered-smile-baby-boy-bubble",
+      "title": "Checkered Smile Baby Boy Bubble",
+      "description": "Checks and smiles \u2014 a soft cotton bubble for sunny afternoons.",
+      "vendor": "Shia Baby",
+      "productType": "Bubble",
+      "tags": [
+        "layette",
+        "boy"
+      ],
+      "collections": [
+        "bubbles",
+        "boy"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/e1c4e8ac90ff439756efd7eb2f5f0c6ba64b046e428daa1b088c2b88c08e905b.jpg",
+        "altText": "Checkered print baby boy bubble"
+      },
+      "priceRange": {
+        "min": 22.99,
+        "max": 22.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "6-12M"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151498170581",
+          "title": "6-12M",
+          "sku": "SR0915-2XS",
+          "price": 22.99,
+          "available": true,
+          "quantityAvailable": 2,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "6-12M"
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "gid://shopify/Product/9443888201941",
+      "handle": "flower-bow-print-girls-athletic-dress",
+      "title": "Flower Bow Print Girls Athletic Dress",
+      "description": "Flowers and bows on an easy athletic silhouette \u2014 made for twirling.",
+      "vendor": "Shia Baby",
+      "productType": "Dress",
+      "tags": [
+        "wardrobe",
+        "girl"
+      ],
+      "collections": [
+        "girl",
+        "new-arrivals"
+      ],
+      "featuredImage": {
+        "url": "https://cdn.shopify.com/s/files/1/0803/8704/7637/files/81796ff69b58ce3c8562eca3172a0c2389f78dcaddead5e1b01edb65525d6852.jpg",
+        "altText": "Flower and bow print girls athletic dress"
+      },
+      "priceRange": {
+        "min": 36.99,
+        "max": 36.99,
+        "currency": "USD"
+      },
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "4T",
+            "5-6T"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/54151498203349",
+          "title": "4T",
+          "sku": "GSD2580-L",
+          "price": 36.99,
+          "available": true,
+          "quantityAvailable": 1,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "4T"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/ProductVariant/54151498236117",
+          "title": "5-6T",
+          "sku": "GSD2580-XL",
+          "price": 36.99,
+          "available": true,
+          "quantityAvailable": 1,
+          "selectedOptions": [
+            {
+              "name": "Size",
+              "value": "5-6T"
+            }
+          ]
+        }
+      ],
+      "images": []
+    }
+  ]
+}
